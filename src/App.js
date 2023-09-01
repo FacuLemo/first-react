@@ -3,13 +3,25 @@ import Hello from './components/Hello.js';
 import Cronometro from './components/segundero';
 import InfoPersona from './components/InfoPersona';
 import Toast from './components/toast';
+import Clock from './components/reloj';
+import InfoUsers from './components/usuarios';
+import ListarUsuario from './components/listarusers';
 
+import usuarios from './data/users.json';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Hello name="Maria"/>
+        <Clock/>
+        
+        <ListarUsuario usuarios={usuarios}/>
+        {
+        usuarios.map(
+          (usuario)=>{return(<InfoUsers key={usuario.id} data={usuario}/>)}
+          )
+        }
+
         <InfoPersona name='juan' lname='carlo'/>
         <a className="App-link" href="https://reactjs.org">Learn React</a>
         <Hello name="James" lname="sunder"/>
