@@ -1,5 +1,5 @@
 import { Component } from "react";
-import InfoUsers from "./usuarios";
+import InfoUsers from "./infousers";
 
 class ListarUsuario extends Component {
     render() {

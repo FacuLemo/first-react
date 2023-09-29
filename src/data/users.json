@@ -2,21 +2,19 @@
     {
         "id": "ABC001",
         "name": "juan",
-        "clave": "123"
+        "apellido": "lopez",
+        "edad":18
     },
     {
         "id": "ABC002",
         "name": "pepe",
-        "clave": "123"
+        "apellido": "perez",
+        "edad":10
     },
     {
         "id": "ABC003",
         "name": "admin",
-        "clave": "123"
-    },
-    {
-        "id": "ABC004",
-        "name": "root",
-        "clave": "123"
+        "apellido": "perez",
+        "edad":99
     }
 ]

@@ -4,30 +4,45 @@ import Cronometro from './components/segundero';
 import InfoPersona from './components/InfoPersona';
 import Toast from './components/toast';
 import Clock from './components/reloj';
-import InfoUsers from './components/usuarios';
 import ListarUsuario from './components/listarusers';
+//----------------------2
+import Box from './layouts/children';
+//import Circle from './components/circle';
+//import Formulario from './components/formulario';
+import Formulario2 from './components/formulario2';
+//import Saludos from './components/saludos';
 
 import usuarios from './data/users.json';
+import ClickContext from './components/clickcontext';
+import Cajita from './components/cajita';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Clock/>
-        
-        <ListarUsuario usuarios={usuarios}/>
-        {
-        usuarios.map(
-          (usuario)=>{return(<InfoUsers key={usuario.id} data={usuario}/>)}
-          )
-        }
-
-        <InfoPersona name='juan' lname='carlo'/>
-        <a className="App-link" href="https://reactjs.org">Learn React</a>
-        <Hello name="James" lname="sunder"/>
         <Cronometro />
-        <Toast mensaje="operacion terminada con éxito"/>
-        {/* hacer el reloj component q cad 1 seg obtenga la hora del sistema - setInterval*/}
+        <ClickContext/>
+        <Cajita/>
+        <ListarUsuario usuarios={usuarios}/>
+        
+        <InfoPersona name='juan' lname='carlo'/>
+        <Hello name="James" lname="sunder"/>
+
+        <Box active={true} ><strong>children2</strong></Box>
+        <Box active={false}>child1</Box>
+        <Box active={true}>child3</Box>
+        <Box active={false}>child4</Box>
+        <Box active={true}>child5</Box>
+        <h1>Formulario controlado</h1>
+        <hr/>
+        <Formulario2/>
+        <hr/>
+        {/* <Saludos width={770} mensaje='Naxabuxi'/> */}
+        <hr/>
+        {/* <Circle width={770} height={250}/> */}
+        
+        <Toast mensaje="operacion terminada con éxito"/> {/* className para clases css*/}
       </header>
     </div>
   );

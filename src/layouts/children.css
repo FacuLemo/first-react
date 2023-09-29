@@ -1,0 +1,25 @@
+.caja{
+    border: solid 1px green;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 2px;
+    width: 400px;
+    box-shadow: 2px 2px;
+}
+.caja_disable{
+    border: solid 1px green;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 2px;
+    width: 400px;
+    box-shadow: 2px 2px;
+    background-color: brown;
+}
+.caja_disable:hover{
+    cursor:crosshair;
+}
+.caja:hover{
+    background-color: darkslategray;
+    cursor:pointer;
+    color:white;
+}
