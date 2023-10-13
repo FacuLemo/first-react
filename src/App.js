@@ -14,34 +14,45 @@ import Circle from './components/circle';
 //import Formulario from './components/formulario';
 import Formulario2 from './components/formulario2';
 import Saludos from './components/saludos';
+//----------------------3
 import Vida from './components/ciclodevida';
 import Vida2 from './components/ciclodevida2';
 import Api from './components/api';
+import LikeUseStateEffect from './components/hooks';
+import TemporizadorCustom from './components/customhook';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Clock/>
+        <hr/>
         <Vida2> 
             <Vida/>
         </Vida2>
-        <Clock/>
+        <hr/>
         <Cronometro />
+        <hr/>
+        <TemporizadorCustom/>
+        <hr/>
         <Api/>
+        <hr/>
+        <LikeUseStateEffect/>
+        <hr/>
         <ClickContext/>
-
         <Cajita/>
+        <hr/>
         <ListarUsuario usuarios={usuarios}/>
-        
         <InfoPersona name='juan' lname='carlo'/>
         <Hello name="James" lname="sunder"/>
-
+        <hr/>
         <Box active={true} ><strong>children2</strong></Box>
         <Box active={false}>child1</Box>
         <Box active={true}>child3</Box>
         <Box active={false}>child4</Box>
         <Box active={true}>child5</Box>
+        <hr/>
         <h1>Formulario controlado</h1>
         <Formulario2/>
         <hr/>

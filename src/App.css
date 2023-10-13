@@ -36,7 +36,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App-header hr{
+  width: 500px;
+  color:antiquewhite;
+}
 .App-link {
   color: #61dafb;
 }
