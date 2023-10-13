@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//este es el volumen que actualiza cada vez que guardas:
 root.render(
   <React.StrictMode>
     <App />

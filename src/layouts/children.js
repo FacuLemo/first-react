@@ -18,7 +18,7 @@ class Box extends Component{
     render(){
 
         const {active=true}=this.state
-        console.log(typeof active)
+        //console.log(typeof active)
         
         return(
             
