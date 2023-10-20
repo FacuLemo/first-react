@@ -15,14 +15,23 @@ import Circle from './components/circle';
 import Formulario2 from './components/formulario2';
 import Saludos from './components/saludos';
 //----------------------3
+import { useContext, useState } from 'react'; //hooks react
 import Vida from './components/ciclodevida';
 import Vida2 from './components/ciclodevida2';
 import Api from './components/api';
-import LikeUseStateEffect from './components/hooks';
-import TemporizadorCustom from './components/customhook';
+import LikeUseStateEffect from './hooks/hooks';
+import TemporizadorCustom from './hooks/customhook';
+import { BuyContext } from './context/context';
+import { Tickets } from './components/tickets';
+
 
 
 function App() {
+  //config inicial para el timer:
+  const [count,setCount]=useState(0)
+
+  const {seconds,finished,start} =  useContext(BuyContext)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -31,6 +40,11 @@ function App() {
         <Vida2> 
             <Vida/>
         </Vida2>
+        <hr/>
+          <button onClick={start}>Iniciar</button>
+          <span>{seconds}</span>
+        <hr/>
+        {!finished && <Tickets/>}
         <hr/>
         <Cronometro />
         <hr/>
