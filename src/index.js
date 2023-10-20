@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BuyContext } from './context/context';
+import { BuyContextProvider } from './context/context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //este es el volumen que actualiza cada vez que guardas:
 root.render(
-
-    <BuyContext.Provider>
-    <App />
-    </BuyContext.Provider>
+    <BuyContextProvider>
+        <App/>
+    </BuyContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -9,8 +9,7 @@ export function Tickets(){
     return(
 
         <>
-        <h1>Pague su ticket</h1>
-        <span>{seconds}</span>
+        <h3>Pague su ticket. Tiene {seconds} s.</h3>
         <button onClick={stop}>Pagar</button>
         </>
     )

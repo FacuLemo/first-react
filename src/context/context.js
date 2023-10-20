@@ -11,7 +11,7 @@ export const BuyContext = createContext()
 
 //necesito un proveedor que le comunique a los componentes este contexto
 //le hacemos uno custom para darle la lógica que necesito
-export const BuyProvider = ({children})=>{
+export const BuyContextProvider = ({children})=>{
     //si quisiera un setState puedo ponerlo
     const timer = useTimer(14)
     return(

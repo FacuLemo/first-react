@@ -41,10 +41,10 @@ function App() {
             <Vida/>
         </Vida2>
         <hr/>
-          <button onClick={start}>Iniciar</button>
+          <button onClick={start}>Reservar</button>
           <span>{seconds}</span>
-        <hr/>
-        {!finished && <Tickets/>}
+        {finished && <p>Haga su reserva para pagar</p>}
+        {!finished && <Tickets/> }
         <hr/>
         <Cronometro />
         <hr/>
