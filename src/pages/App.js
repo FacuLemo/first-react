@@ -1,28 +1,31 @@
-import './App.css';
-import Hello from './components/Hello.js';
-import Cronometro from './components/segundero';
-import InfoPersona from './components/InfoPersona';
-import Toast from './components/toast';
-import Clock from './components/reloj';
-import ListarUsuario from './components/listarusers';
-import usuarios from './data/users.json';
-import ClickContext from './components/clickcontext';
-import Cajita from './components/cajita';
+import '../App.css';
+import Hello from '../components/Hello.js';
+import Cronometro from '../components/segundero';
+import InfoPersona from '../components/InfoPersona';
+import Toast from '../components/toast';
+import Clock from '../components/reloj';
+import ListarUsuario from '../components/listarusers';
+import usuarios from '../data/users.json';
+import ClickContext from '../components/clickcontext';
+import Cajita from '../components/cajita';
 //----------------------2
-import Box from './layouts/children';
-import Circle from './components/circle';
+import Box from '../layouts/children';
+import Circle from '../components/circle';
 //import Formulario from './components/formulario';
-import Formulario2 from './components/formulario2';
-import Saludos from './components/saludos';
+import Formulario2 from '../components/formulario2';
+import Saludos from '../components/saludos';
 //----------------------3
 import { useContext, useState } from 'react'; //hooks react
-import Vida from './components/ciclodevida';
-import Vida2 from './components/ciclodevida2';
-import Api from './components/api';
-import LikeUseStateEffect from './hooks/hooks';
-import TemporizadorCustom from './hooks/customhook';
-import { BuyContext } from './context/context';
-import { Tickets } from './components/tickets';
+import Vida from '../components/ciclodevida';
+import Vida2 from '../components/ciclodevida2';
+import Api from '../components/api';
+import LikeUseStateEffect from '../hooks/hooks';
+import TemporizadorCustom from '../hooks/customhook';
+import { BuyContext } from '../context/context';
+import { Tickets } from '../components/tickets';
+//-----------------------4 React Router
+import Menu from '../components/menu';
+
 
 
 
@@ -35,6 +38,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Menu/>
         <Clock/>
         <hr/>
         <Vida2> 
@@ -43,6 +47,7 @@ function App() {
         <hr/>
           <button onClick={start}>Reservar</button>
           <span>{seconds}</span>
+        <hr/>
         {finished && <p>Haga su reserva para pagar</p>}
         {!finished && <Tickets/> }
         <hr/>
